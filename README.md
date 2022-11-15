@@ -1,0 +1,3 @@
+# CKAD NOTES
+
+## CORE
