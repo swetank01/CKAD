@@ -1,0 +1,24 @@
+# $HOME/.kube/config
+
+apiVersion: v1
+kind: Config
+
+current-context: admin@development
+
+clusters:
+- name: production
+- name: staging
+- name: development
+- name: local
+
+contexts:
+- name: developer@local
+- name: developer@development
+- name: tester@staging
+
+
+users:
+- name: admin
+- name: developer
+- name: tester
+- name: local-dev-user
