@@ -73,3 +73,17 @@ PersistentVolume types are implemented as plugins. Kubernetes currently supports
 - local - local storage devices mounted on nodes.
 - nfs - Network File System (NFS) storage
 - rbd - Rados Block Device (RBD) volume
+
+## PVC
+
+### Spec:
+
+```
+spec:
+  accessModes:
+    - ReadWriteOnce
+    
+  resources:
+    requests:
+      storage: 500Mi
+```
