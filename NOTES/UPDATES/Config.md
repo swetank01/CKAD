@@ -16,3 +16,12 @@ kubectl  config view
 ```sh
 kubectl config use-context tester@local
 ```
+
+### kubeConfig with cert
+
+##### encode 
+
+cat ca.crt | base64
+##### decode 
+
+echo "dhaksdal" | base64 --decode

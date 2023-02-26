@@ -7,18 +7,34 @@ current-context: admin@development
 
 clusters:
 - name: production
-- name: staging
+  cluster:
+    certificate-authority: ca.crt
+    server: https://prod-kube-playgroud:6433
+
 - name: development
+    certificate-authority: ca.crt
+    server: https://dev-kube-playgroud:6433
 - name: local
+    certificate-authority: ca.crt
+    server: https://localhost:6433
 
 contexts:
 - name: developer@local
-- name: developer@development
-- name: tester@staging
+  context:
+    cluster: local
+    user: developer
+    namespace: ckad
 
+- name: tester@staging
+  context:
+    cluster: staging
+    user: tester
 
 users:
 - name: admin
+  user:
+    client-certificate: admin.crt
+    client-key: admin.key
 - name: developer
 - name: tester
 - name: local-dev-user
