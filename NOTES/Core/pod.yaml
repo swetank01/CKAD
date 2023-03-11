@@ -1,0 +1,9 @@
+apiVersion: appv1
+kind: pod
+metadata:
+  name: myapp-pod
+  tag: learning-ckad
+spec:
+  containers:
+    - name: myFirstContainer
+      image: busybox
